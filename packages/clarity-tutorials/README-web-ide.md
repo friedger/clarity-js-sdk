@@ -22,4 +22,10 @@ https://gitpod.io/#https://github.com/friedger/clarity-js-sdk/blob/feature/web-i
    1. `yarn jest test/tokens/fungibleToken.test.ts`
 
 1. Deploy contract to testnet:
-    1. `npx ts-node scripts/fungible-token
+    1. `npx ts-node scripts/fungible-token`
+    1. ignore the error due to https://github.com/blockstack/stacks-blockchain/issues/1699
+
+1. Use clarity read-eval-print-loop
+    1. type `clarity-repl` - use tab to auto-complete
+    1. start typing clarity statements
+
