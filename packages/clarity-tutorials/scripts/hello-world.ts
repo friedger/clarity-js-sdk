@@ -8,7 +8,7 @@ async function init(deploy: boolean = true) {
   ProviderRegistry.registerProvider({
     create: async () => {
       const network = new StacksTestnet();
-      network.coreApiUrl = "http://testnet-master.blockstack.org:20443";
+      network.coreApiUrl = "http://testnet-master.blockstack.org:20443"; // can be replaced with the local (in-browsser) mocknet
       const provider = await JsonRpcProvider.create(
         network,
         "https://sidecar.staging.blockstack.xyz",

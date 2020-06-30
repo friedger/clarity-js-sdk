@@ -1,9 +1,9 @@
 import { Client, Provider, Receipt, Result } from "@blockstack/clarity";
 
 export class FungibleTokenClient extends Client {
-  constructor(provider: Provider) {
+  constructor(provider: Provider, contractAddress:string = "STR2BKSZQHTZGJB9QB97XDVTY70QM1HHZCDZYS2N") {
     super(
-      "STR2BKSZQHTZGJB9QB97XDVTY70QM1HHZCDZYS2N.fungible-token",
+      `${contractAddress}.fungible-token`,
       "tokens/fungible-token",
       provider
     );

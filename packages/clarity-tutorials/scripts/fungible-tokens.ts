@@ -10,7 +10,8 @@ let client: FungibleTokenClient | undefined;
   client = new FungibleTokenClient(
     await createJsonRpcProvider(
       "44767e169d5146c704a308d7ff2e3edac573e2649fb690aa4e8526480678d19e01"
-    )
+    ),
+    "STR2BKSZQHTZGJB9QB97XDVTY70QM1HHZCDZYS2N"
   );
 
   // await client.deployContract();
