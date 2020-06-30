@@ -102,3 +102,5 @@ import { FungibleTokenClient } from "../src/clients/tokens/fungibleToken";
 
 
 ```
+
+Run the script, e.g. via `npx ts-node fungible-tokens.ts`
