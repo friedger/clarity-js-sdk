@@ -56,6 +56,7 @@ https://gitpod.io/#https://github.com/friedger/clarity-js-sdk/blob/feature/web-i
 1. Use clarity read-eval-print-loop
     1. In terminal, type `clarity-repl` - use tab to auto-complete
     1. Start typing clarity statements like `(mod 3 2)`
+    1. Press Ctrl + c twice to exit clarity-repl
     
 1. Start stacks node
     1. In terminal, type `stacks-node mocknet`
