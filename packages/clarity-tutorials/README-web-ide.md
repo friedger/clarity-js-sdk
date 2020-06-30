@@ -15,7 +15,7 @@ The contribution consists of two parts
 ## gitpod configuration for Clarity
 Gitpod is an open-source Web IDE for github and gitlab repositories. The design and functionality is inspired by Visual Studio Code.
 With extra configuration the Web IDE can be adjusted for the type of code hosted in the repo.
-The developed configuration contains:
+The developed configuration for Clarity development contains:
 * Both Visual Studio Code plugins for Clarity
 * the Clarity REPL
 * the Stacks node
