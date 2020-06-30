@@ -70,3 +70,35 @@ https://gitpod.io/#https://github.com/friedger/clarity-js-sdk/blob/feature/web-i
         1. Run `npx ts-node scripts/fungible-token`
     1. or you can configure your mocknet by typing `stacks-node start --config=~/tools/stacks-blockchain/testnet/stacks-node/Stacks.toml` after adding an initial amount to your address(es) in that file.
 
+## JsonRCPPRovider
+For testing Clarity contracts, the clarity-js-sdk helps to simplifies the process by providing a `Client` object, that can make contract calls and query the state of the clarity program. The Clients requires a `Provider` objects that knows how to execute these calls and queries. The default provider connects to a Clarity VM through the clarity-cli.
+
+While this is great for unit testing Clarity contracts, until now, the contract calls and queries have to be rewritten using the `stacks-transactions-js` library when the developer wants to execute the calls and queries on a stacks blockchain. This is tedious and cumbersome. Therefore, a `JsonRCPPRovider` was developed that connects to a stacks network. 
+
+Developers can now use the same `Client` object to make calls and queries also on a stacks blockchain by using the `JsonRCPPRovider`.
+
+### Use (with FungibleTokenClient)
+```
+import { createJsonRpcProvider } from "@blockstack/clarity";
+import { StacksTestnet } from "@blockstack/stacks-transactions";
+import { FungibleTokenClient } from "../src/clients/tokens/fungibleToken";
+
+(async () => {
+  // create client with JsonRcpProvider
+  client = new FungibleTokenClient(
+    await createJsonRpcProvider(
+      "44767e169d5146c704a308d7ff2e3edac573e2649fb690aa4e8526480678d19e01" // privateKey
+    ),
+    "STR2BKSZQHTZGJB9QB97XDVTY70QM1HHZCDZYS2N" // address
+  );
+
+  // use client to deploy contract to Stacks blockchain
+  await client.deployContract();
+
+  // use client to make a query on the Stacks blockchain
+  const result = await client.balanceOf("ST398K1WZTBVY6FE2YEHM6HP20VSNVSSPJTW0D53M");
+  console.log(result);
+})();
+
+
+```
