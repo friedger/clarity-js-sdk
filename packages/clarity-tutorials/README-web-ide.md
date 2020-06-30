@@ -1,6 +1,6 @@
 # Web IDE for Clarity
 
-**Developers can now start developing and test Clarity programs directly from the browser!**
+**Developers can now start developing and testing Clarity programs directly from the browser!**
 
 This repo (or any other on github or gitlab) can be used as a development environment 
 for Clarity code in the browser. Just open the [gitpod url](https://gitpod.io/#https://github.com/friedger/clarity-js-sdk/blob/feature/web-ide/packages/clarity-tutorials/README-web-ide.md).
