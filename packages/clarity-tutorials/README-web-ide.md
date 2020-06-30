@@ -64,6 +64,9 @@ https://gitpod.io/#https://github.com/friedger/clarity-js-sdk/blob/feature/web-i
     1. Click `Open Ports`, select port 20443 and click `Open in Browser`
     1. A new tab opens, add `/v2/info` behind the url in the addressbar
     1. See the information about your node
-    1. You can also, type `stacks-node argon` to launch a public node of the testnet 
-    1. or you can configure your mockent by typing `stacks-node start -config=~/tools/stacks-blockchain/testnet/stacks-node/Stacks.toml` after adding an initial amount to your address(es) in that file.
+    1. You can also, type `stacks-node argon` to launch a public node of the testnet. Wait until the node has synced and the node is listening on port 20443, then you can deploy the contract through your own node:
+        1. Make port 20443 public. 
+        1. Update the coreApiUrl in `scripts/fungible-tokens.ts`
+        1. Run `npx ts-node scripts/fungible-token`
+    1. or you can configure your mocknet by typing `stacks-node start --config=~/tools/stacks-blockchain/testnet/stacks-node/Stacks.toml` after adding an initial amount to your address(es) in that file.
 
