@@ -11,6 +11,7 @@ This is a contribution to the "Clarity Hackathon - Tools".
 The contribution consists of two parts
 - a sharable gitpod configuration for Clarity ([.gitpod.yaml](/.gitpod.yaml) and [.gitpod.Dockerfile](/.gitpod.Dockerfile))
 - a [JsonRcpProvider](/packages/clarity/src/providers/jsonRcp) for the clarity-js-sdk
+- two videos explaining the use of the Web IDE for Clarity and the JsonRpcProvider
 
 ## gitpod configuration for Clarity
 Gitpod is an open-source Web IDE for github and gitlab repositories. The design and functionality is inspired by Visual Studio Code.
@@ -104,3 +105,8 @@ import { FungibleTokenClient } from "../src/clients/tokens/fungibleToken";
 ```
 
 Run the script, e.g. via `npx ts-node fungible-tokens.ts`
+
+## Videos
+* Introduction to the Web IDE for Clarity [https://youtu.be/61Vie1Hc608](https://youtu.be/61Vie1Hc608)
+* Running unit tests and deploy a contract with the same `Client` using the clarity vm provider and the `JsonRpcProvider` [https://youtu.be/_jvk5L2GWok](https://youtu.be/_jvk5L2GWok)
+
