@@ -11,7 +11,7 @@ This is a contribution to the "Clarity Hackathon - Tools".
 The contribution consists of two parts
 - a sharable gitpod configuration for Clarity ([.gitpod.yaml](/.gitpod.yaml) and [.gitpod.Dockerfile](/.gitpod.Dockerfile))
 - a [JsonRcpProvider](/packages/clarity/src/providers/jsonRcp) for the clarity-js-sdk
-- two videos explaining the use of the Web IDE for Clarity and the JsonRpcProvider
+- two [videos](https://www.youtube.com/playlist?list=PLA5-mLPrLnHpc6WsieRck1_VE03kuvIAh) explaining the use of the Web IDE for Clarity and the JsonRpcProvider
 
 ## gitpod configuration for Clarity
 Gitpod is an open-source Web IDE for github and gitlab repositories. The design and functionality is inspired by Visual Studio Code.
