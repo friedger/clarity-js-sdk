@@ -42,7 +42,7 @@ https://gitpod.io/#https://github.com/friedger/clarity-js-sdk/blob/feature/web-i
    1. See all the test results, the tests are written using the `FungibleTokensClient` with the default `Provider` that gives access to a Clarity VM.
 
 1. Deploy a Clarity program to Stacks testnet using the same `FungibleTokensClient` using the **`JsonRCPPRovider`** :
-    1. Open a new termin and create a new keychain by typing: `blockstack-cli make_keychain -t`
+    1. Open a new termin and create a new keychain by typing: `blockstack make_keychain -t`
     1. Open file `packages/clarity-tutorials/scripts/fungible-tokens.ts`
     1. In the file editor, replace the private key with the value from the new created keychain (using Ctrl + c and Ctrl + v as usual)
     1. Replace also the address
