@@ -1,4 +1,5 @@
 import { CheckResult, Receipt } from ".";
+import { ClarityValue } from "@stacks/transactions";
 
 export interface ProviderConstructor {
   create(): Promise<Provider>;
@@ -15,11 +16,14 @@ export interface Provider {
     contractName: string,
     functionName: string,
     senderAddress: string,
-    ...args: string[]
+    ...args: ClarityValue[]
   ): Promise<Receipt>;
 
   eval(
-    contractName: string, evalStatement: string, includeDebugOutput?: boolean, atChaintip?: boolean
+    contractName: string,
+    evalStatement: string,
+    includeDebugOutput?: boolean,
+    atChaintip?: boolean
   ): Promise<Receipt>;
 
   evalRaw(evalStatement: string): Promise<Receipt>;

@@ -1,3 +1,4 @@
+import { ClarityValue, cvToString } from "@stacks/transactions";
 import fs from "fs-extra";
 import { CheckResult, Receipt } from "../../core";
 import { Provider } from "../../core/provider";
@@ -154,7 +155,7 @@ export class NativeClarityBinProvider implements Provider {
     contractName: string,
     functionName: string,
     senderAddress: string,
-    ...args: string[]
+    ...args: ClarityValue[]
   ): Promise<Receipt> {
     const result = await this.runCommand([
       "execute",
@@ -162,7 +163,7 @@ export class NativeClarityBinProvider implements Provider {
       contractName,
       functionName,
       senderAddress,
-      ...args,
+      ...args.map((cv) => cvToString(cv)),
     ]);
     if (result.exitCode !== 0) {
       throw new ExecutionError(

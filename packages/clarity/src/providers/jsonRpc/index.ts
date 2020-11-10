@@ -1,3 +1,4 @@
+import { ClarityValue } from "@stacks/transactions";
 import { CheckResult, Receipt } from "../../core";
 import { Provider } from "../../core/provider";
 
@@ -6,13 +7,13 @@ export class JsonRpcProvider implements Provider {
 
   async checkContract(contractFilePath: string): Promise<CheckResult> {
     return {
-      success: false
+      success: false,
     };
   }
 
   async launchContract(contractName: string, contractFilePath: string): Promise<Receipt> {
     return {
-      success: false
+      success: false,
     };
   }
 
@@ -20,16 +21,16 @@ export class JsonRpcProvider implements Provider {
     contractName: string,
     functionName: string,
     senderAddress: string,
-    ...args: string[]
+    ...args: ClarityValue[]
   ): Promise<Receipt> {
     return {
-      success: false
+      success: false,
     };
   }
 
   async evalRaw(evalStatement: string): Promise<Receipt> {
     return {
-      success: false
+      success: false,
     };
   }
 
@@ -39,7 +40,7 @@ export class JsonRpcProvider implements Provider {
     includeDebugOutput = true
   ): Promise<Receipt> {
     return {
-      success: false
+      success: false,
     };
   }
 

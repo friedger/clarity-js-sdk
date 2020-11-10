@@ -34,7 +34,8 @@
     "test": "npm run build && nyc mocha"
   },
   "peerDependencies": {
-    "@blockstack/clarity-native-bin": "^0.1.10-alpha.0"
+    "@blockstack/clarity-native-bin": "^0.3.0",
+    "@stacks/transactions": "1.0.0-beta.9"
   },
   "devDependencies": {
     "@blockstack/clarity-native-bin": "^0.3.0",
